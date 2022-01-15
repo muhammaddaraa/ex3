@@ -41,7 +41,7 @@ class Body extends StatelessWidget {
               subtitle: Text(_todos[index].description),
               onTap: () async {
                 final todo = await Navigator.of(context)
-                    .pushNamed('/edit', arguments: _todos[index]);
+                .pushNamed('/edit', arguments: _todos[index]);
                 if (todo != null) _state.updateTodo(index: index, todo: todo);
               },
               onLongPress: () => _state.removeTodo(index),
